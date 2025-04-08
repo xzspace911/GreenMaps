@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_maps/presentation/screens/auth/login_screen.dart';
 import 'package:flutter_maps/presentation/widgets/connect_with.dart';
 import 'package:flutter_maps/presentation/widgets/xelevated_button.dart';
 import 'package:flutter_maps/utils/colors.dart';
 import 'package:flutter_maps/utils/strings.dart';
-import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 class CreateAnAccount extends StatefulWidget {
