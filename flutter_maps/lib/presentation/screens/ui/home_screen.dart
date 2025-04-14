@@ -38,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: XColors.darkBackgroundColor,
+      // backgroundColor: XColors.darkBackgroundColor,
       appBar: CustomAppBar(
         selectedTabIndex: _selectedTabIndex,
         onTabSelected: (index) {
@@ -46,7 +46,8 @@ class _HomeScreenState extends State<HomeScreen> {
         },
       ),
       body: _locationController.currentLocation == null
-          ? const Center(child: CircularProgressIndicator(color: XColors.extraLightColor))
+          ? const Center(
+              child: CircularProgressIndicator(color: XColors.extraLightColor))
           : FlutterMap(
               mapController: mapController,
               options: MapOptions(
@@ -56,7 +57,8 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               children: [
                 TileLayer(
-                  urlTemplate: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                  urlTemplate:
+                      "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                   subdomains: const ['a', 'b', 'c'],
                 ),
                 MarkerLayer(markers: _routeController.markers),
@@ -79,7 +81,8 @@ class _HomeScreenState extends State<HomeScreen> {
             mapController.move(_locationController.currentLatLng, 15.0);
           }
         },
-        child: const Icon(Icons.location_pin, color: XColors.darkBackgroundColor),
+        child:
+            const Icon(Icons.location_pin, color: XColors.darkBackgroundColor),
       ),
     );
   }

@@ -33,7 +33,8 @@ class TabBarSection extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 14,
                   fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
-                  color: isSelected ? XColors.darkBackgroundColor : XColors.white,
+                  color:
+                      isSelected ? XColors.darkBackgroundColor : XColors.white,
                 ),
               ),
               if (isSelected)
@@ -42,7 +43,8 @@ class TabBarSection extends StatelessWidget {
                   height: 3,
                   width: 30,
                   color: XColors.lemonColor,
-                )
+                ),
+              SizedBox(height: 7),
             ],
           ),
         );
